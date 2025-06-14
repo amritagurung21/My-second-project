@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good Morning</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            padding: 10px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-image: url("https://media.istockphoto.com/id/473313240/photo/children-playing-in-the-park-at-playground-and-communicating.jpg?s=612x612&w=0&k=20&c=eMpRprDUvFC35nYizsBKlUPiIU9aDt8v9bKzu-ZQagI=");
+            background-color: #cccccc;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head> 
+<body>
+    <h2>Good Morning</h2>
+    <button onclick="switchBackground()">Switch</button>
+
+    <script>
+        let toggle = false;
+
+        function switchBackground() {
+            const body = document.body;
+
+            if (!toggle) {
+                body.style.backgroundImage = "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')";
+            } else {
+                body.style.backgroundImage = "url('https://media.istockphoto.com/id/473313240/photo/children-playing-in-the-park-at-playground-and-communicating.jpg?s=612x612&w=0&k=20&c=eMpRprDUvFC35nYizsBKlUPiIU9aDt8v9bKzu-ZQagI=')";
+            }
+
+            toggle = !toggle;
+        }
+    </script>
+</body>
+</html>
